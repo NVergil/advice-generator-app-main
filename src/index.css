@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  /* ### Neutral */
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-Grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  /* ## Typography */
+
+  --size: 28px;
+
+  /* ### Font */
+  /* - Weights: 800 */
+  /* [Manrope](https://fonts.google.com/specimen/Manrope) */
+  --font-manrope: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  font-family: var(--font-manrope);
+  background: var(--dark-blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 1rem;
+  background: var(--dark-Grayish-blue);
+  padding: 2.5rem;
+}
+
+.id-advice {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--neon-green);
+  letter-spacing: 5px;
+}
+
+.advice {
+  color: var(--light-cyan);
+  font-size: var(--size);
+  margin: 0;
+  margin-block: 2rem;
+}
+
+.divider-desk {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.randomize {
+  position: absolute;
+  bottom: -28px;
+  background: var(--neon-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 75ms ease-in-out;
+}
+
+.randomize:hover {
+  box-shadow: 0 0 35px 1px var(--neon-green);
+}
+
+.attribution {
+  margin-top: 3rem;
+  font-size: 12px;
+  text-align: center;
+  color: var(--light-cyan);
+}
+.attribution a {
+  color: hsl(228, 84%, 81%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+  .id-advice {
+    font-size: 0.65rem;
+  }
+  .divider-desk {
+    object-fit: cover;
+    height: 16.92px;
+  }
+  .advice {
+    font-size: 1.4rem;
+  }
+}
